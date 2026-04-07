@@ -43,7 +43,7 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal, .detail-card, .rsvp-left, .rsvp-form').forEach(el => observer.observe(el));
 
 // ── URL GOOGLE APPS SCRIPT ──
-const GAS_URL = "https://script.google.com/macros/s/TON_ID/exec"; // 🔑 remplace TON_ID
+const GAS_URL = "https://script.google.com/macros/s/AKfycbxSyCdP6oUzoMKVli1lQ6x5dZtqP5prkril_VCBYYdTBsP2e074cw_tPmGvSypqbts/exec"; // 🔑 remplace TON_ID
 
 // ── Fetch real respondent count via GAS (doGet) ──
 let realCount = 0;
