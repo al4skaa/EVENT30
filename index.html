@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étienne 30 ans — Anniversaire Surprise</title>
+
+    <!-- Meta OG / partage WhatsApp, iMessage, etc. -->
+    <meta property="og:title" content="Étienne fête ses 30 ans 🎉">
+    <meta property="og:description" content="Week-end surprise piscine, pétanque & barbecue en Occitanie ou Ardèche. Confirme ta présence !">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Étienne fête ses 30 ans 🎉">
+    <meta name="twitter:description" content="Week-end surprise piscine, pétanque & barbecue. Confirme ta présence !">
+    <meta name="description" content="Anniversaire surprise 30 ans Étienne — week-end piscine, pétanque, barbecue en Occitanie ou Ardèche.">
+
+    <!-- Favicon inline SVG -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎉</text></svg>">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Confirmation overlay -->
+    <div class="confirm-overlay" id="confirmOverlay">
+        <div class="confirm-emoji">🎉</div>
+        <h2 class="confirm-title">C'est noté !</h2>
+        <div class="confirm-summary" id="confirmSummary">
+            <p>Nom : <strong id="sumNom">—</strong></p>
+            <p>Dates cochées : <strong id="sumDates">—</strong></p>
+            <p>Participation : <strong id="sumPart">—</strong></p>
+        </div>
+        <p style="color:var(--muted);font-size:0.95rem;max-width:420px;line-height:1.6;position:relative;">On vous tient au courant dès que la date et le lieu sont fixés. Merci 🙏</p>
+        <button class="confirm-back" onclick="closeConfirm()">← Retour à la page</button>
+    </div>
+
+    <!-- Sticky CTA -->
+    <a href="#rsvp" class="sticky-cta" id="stickyCta">Je viens →</a>
+
+    
+    <!-- Bandeau surprise -->
+    <div style="position:fixed;top:0;left:0;right:0;z-index:199;background:rgba(159,18,57,0.92);backdrop-filter:blur(10px);padding:0.7rem 1.5rem;text-align:center;font-size:0.72rem;font-weight:500;letter-spacing:0.12em;color:rgba(255,255,255,0.9);text-transform:uppercase;" id="surpriseBanner">
+        🤫 &nbsp; Chut — c'est une surprise. Ne mentionnez pas cette page à Étienne.
+        <button onclick="document.getElementById('surpriseBanner').style.display='none'" style="background:none;border:none;color:rgba(255,255,255,0.5);cursor:pointer;margin-left:1.5rem;font-size:1rem;line-height:1;">✕</button>
+    </div>
+
+    <nav id="navbar" style="top:2.4rem;">
+        <div class="nav-logo">Anniversaire Étienne</div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">Accueil</a></li>
+            <li><a href="#infos">Détails</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div class="hero-inner">
+            <p class="hero-sup">Anniversaire surprise</p>
+            <h1 class="hero-title">
+                <span class="thin">30 ans</span>
+                <span class="big">Etienne</span>
+            </h1>
+            <div class="hero-footer">
+                <p class="hero-desc">
+                    Un week-end comme il se doit, entre amis, quelque part en Occitanie ou Ardèche.
+                </p>
+                <a href="#rsvp" class="cta-pill">Je viens →</a>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-dot"></div>
+        </div>
+    </section>
+
+                    <div class="count-unit">Jours</div>
+            </div>
+            <div class="count-sep">:</div>
+            <div class="count-item">
+                <div class="count-num" id="cd-hours">--</div>
+                <div class="count-unit">Heures</div>
+            </div>
+            <div class="count-sep">:</div>
+            <div class="count-item">
+                <div class="count-num" id="cd-mins">--</div>
+                <div class="count-unit">Minutes</div>
+            </div>
+            <div class="count-sep">:</div>
+            <div class="count-item">
+                <div class="count-num" id="cd-secs">--</div>
+                <div class="count-unit">Secondes</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DETAILS -->
+    <section id="infos" class="section">
+        <p class="section-label reveal">Les détails</p>
+        <h2 class="section-title reveal">Ce qui vous attend</h2>
+        <div class="details-grid">
+            <div class="detail-card">
+                <span class="detail-icon">📍</span>
+                <h3>Occitanie ou Ardèche</h3>
+                <p>Le lieu sera défini selon le nombre de participants. On s'adapte pour que tout le monde soit là.</p>
+            </div>
+            <div class="detail-card">
+                <span class="detail-icon">📅</span>
+                <h3>Date selon les dispo</h3>
+                <p>On choisit le week-end qui convient au plus grand nombre. Indiquez vos disponibilités ci-dessous.</p>
+            </div>
+            <div class="detail-card">
+                <span class="detail-icon">🏊</span>
+                <h3>Week-end piscine</h3>
+                <p>Pétanque, apéro, barbecue — un vrai week-end comme on les aime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp" class="section">
+        <div class="rsvp-wrapper">
+            <div class="rsvp-left">
+                <p class="section-label">RSVP</p>
+                <h2>Confirmez votre présence.</h2>
+
+                <div class="social-proof">
+                    <div class="proof-dots" id="proofDots">
+                        <div class="proof-dot" style="animation-delay:0s">😊</div>
+                        <div class="proof-dot" style="animation-delay:0.1s">🙋</div>
+                        <div class="proof-dot" style="animation-delay:0.2s">👋</div>
+                        <div class="proof-dot" style="animation-delay:0.3s">🎉</div>
+                    </div>
+                    <p class="proof-text"><strong id="repondus">0</strong> personnes ont déjà répondu</p>
+                </div>
+
+                <p>Pour permettre qu'on organise ça rapidement 🙂 Si vous indiquez être dispo, merci de vous y tenir.</p>
+
+                <div class="participation-note" style="margin-bottom:1.5rem">
+                    <span>💰</span>
+                    <p>Une participation financière sera demandée pour la réservation du gîte et la participation aux courses. Les détails vous seront communiqués une fois la date fixée.</p>
+                </div>
+
+                <div class="organizer">
+                    <span>✉️</span>
+                    <span>Une question ? <a href="tel:+33674439938" style="color:rgba(255,255,255,0.6);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.2);padding-bottom:1px;transition:color 0.3s;">06 74 43 99 38</a></span>
+                </div>
+            </div>
+
+            <form class="rsvp-form" id="rsvpForm">
+                <div class="input-row">
+                    <div class="input-group" id="grp-prenom">
+                        <label>Prénom</label>
+                        <input type="text" id="inp-prenom" autocomplete="given-name" placeholder="Marie" required>
+                        <span class="error-msg">Prénom requis</span>
+                    </div>
+                    <div class="input-group" id="grp-tel">
+                        <label>Téléphone</label>
+                        <input type="tel" id="inp-tel" autocomplete="tel" placeholder="06 12 34 56 78" required>
+                        <span class="error-msg">Numéro requis</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Participation</label>
+                    <div class="toggle-row">
+                        <div class="toggle-opt active" id="solo-btn" onclick="selectToggle('solo')">Seul(e)</div>
+                        <div class="toggle-opt" id="plus1-btn" onclick="selectToggle('plus1')">+ Accompagné(e)</div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Dates disponibles <span style="opacity:0.4;font-weight:400;text-transform:none;letter-spacing:0">(plusieurs choix possibles)</span></label>
+                    <div class="dates-wrap">
+                        <div class="date-opt" onclick="selectDate(this)">
+                            <input type="checkbox" name="dates" value="11-12 juillet">
+                            <div class="d-day">11–12</div>
+                            <div class="d-month">Juillet</div>
+                            <div class="d-range">Week-end</div>
+                        </div>
+                        <div class="date-opt" onclick="selectDate(this)">
+                            <input type="checkbox" name="dates" value="8-9 août">
+                            <div class="d-day">8–9</div>
+                            <div class="d-month">Août</div>
+                            <div class="d-range">Week-end</div>
+                        </div>
+                        <div class="date-opt" onclick="selectDate(this)">
+                            <input type="checkbox" name="dates" value="5-6 septembre">
+                            <div class="d-day">5–6</div>
+                            <div class="d-month">Sept.</div>
+                            <div class="d-range">Week-end</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Message <span style="opacity:0.4;font-weight:400;text-transform:none;letter-spacing:0">(optionnel)</span></label>
+                    <textarea rows="3" id="inp-msg" placeholder="Allergies, contraintes, remarques..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-confirm">Confirmer ma présence</button>
+            </form>
+        </div>
+    </section>
+
+    <footer style="border-top:1px solid rgba(255,255,255,0.08);padding:4rem 3rem 3rem;max-width:1400px;margin:0 auto;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:3rem;flex-wrap:wrap;margin-bottom:3rem;">
+            <div>
+                <p style="font-size:2rem;font-weight:900;letter-spacing:-0.03em;margin-bottom:0.5rem;">Étienne, 30 ans.</p>
+                <p style="color:rgba(255,255,255,0.4);font-size:0.95rem;font-weight:300;">Un week-end entre amis. Piscine, pétanque, barbecue.</p>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;text-align:right;">
+                <a href="#rsvp" style="color:rgba(255,255,255,0.8);text-decoration:none;font-weight:600;font-size:0.95rem;transition:color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Confirmer ma présence →</a>
+                <a href="tel:+33674439938" style="color:rgba(255,255,255,0.4);text-decoration:none;font-size:0.9rem;transition:color 0.3s;" onmouseover="this.style.color='rgba(255,255,255,0.7)'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">06 74 43 99 38</a>
+            </div>
+        </div>
+        <div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+            <p style="color:rgba(255,255,255,0.2);font-size:0.8rem;letter-spacing:0.05em;">Occitanie · Ardèche · 2026</p>
+            <p style="color:rgba(255,255,255,0.2);font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;">🤫 Anniversaire Surprise</p>
+        </div>
+    </footer>
+
+        <script src="script.js"></script>
+</body>
+</html>
